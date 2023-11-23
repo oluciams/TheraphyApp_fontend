@@ -2,29 +2,60 @@
 
   <span class="text-lg mb-4">Registro</span>
 
-  <mat-form-field>
-    <mat-label>Usuario</mat-label>
-    <input type="text" matInput placeholder="Nombre de usuario">
-  </mat-form-field>
+  <form class="flex flex-column"
+        [formGroup]="resgisterForm"
+        (ngSubmit)="crearUsuario()"
+        >
 
-  <mat-form-field>
-    <mat-label>Nombre</mat-label>
-    <input type="text" matInput placeholder="Nombre de usuario">
-  </mat-form-field>
+    <mat-form-field>
+      <mat-label>Nombre</mat-label>
+      <input
+        type="text"
+        matInput placeholder="Nombre de usuario"
+        formControlName="nombre"
+        >
+    </mat-form-field>
 
-  <mat-form-field>
-    <mat-label>Contraseña</mat-label>
-    <input type="password" matInput placeholder="Contraseña">
-  </mat-form-field>
+    <mat-form-field>
+      <mat-label>Correo</mat-label>
+      <input
+        type="email"
+        matInput placeholder="Correo Electronico"
+        formControlName="email">
+    </mat-form-field>
 
-  <button mat-button mat-flat-button color="primary">
-    <mat-icon>save</mat-icon>
-    Crear cuenta
-  </button>
+    <mat-form-field>
+      <mat-label>Contraseña</mat-label>
+      <input
+        type="password"
+        matInput placeholder="Contraseña"
+        formControlName="password">
+    </mat-form-field>
 
+     <mat-form-field>
+      <mat-label>Confirmar Contraseña</mat-label>
+      <input
+      type="password"
+      matInput placeholder="Confirmar Contraseña"
+      formControlName="password2">
+    </mat-form-field>
+
+
+    <div class="flex justify-content-center mt-3">
+      <p *ngIf="campoNoValido('nombre')"> El nombre es obligatorio</p>
+      <p *ngIf="campoNoValido('email')">El correo eléctronico es obligatorio</p>
+      <p *ngIf="contrasenasNoValidas()">Las contraseñas deben de ser iguales</p>
+    </div>
+
+    <button mat-button mat-flat-button color="primary">
+      <mat-icon>save</mat-icon>
+      Crear cuenta
+    </button>
+
+  </form>
 
   <div class="flex justify-content-end mt-5">
-    <a routerLink="/auth/login">¿No tienes cuenta?</a>
+    <a routerLink="/auth/login">¿Ya tienes cuenta?</a>
   </div>
 
 </div>
