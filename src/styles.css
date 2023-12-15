@@ -7,7 +7,10 @@ body {
   margin: 0;
   font-family: 'Raleway', Roboto, "Helvetica Neue", sans-serif;
 }
-h1 {
+.spacer {
+  flex: 1 1 auto;
+}
+/* h1 {
   text-align: center;
   padding: 1rem;
 }
@@ -17,4 +20,4 @@ h1 {
   background-position: center;
   background-size: cover;
   height: 90vh;
-}
+} */
