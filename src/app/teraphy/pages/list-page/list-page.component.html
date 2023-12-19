@@ -3,6 +3,12 @@
 
   <div class="col-12 sm:col-4 md:col-3 xl:col-2">
     <h2>Pacientes</h2>
+    <ul>
+      <li *ngFor="let patient of patients">
+        {{patient.name}}
+        {{patient.lastname}}
+      </li>
+    </ul>
   </div>
 
 </div>
