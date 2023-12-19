@@ -9,6 +9,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { NewPatientComponent } from './pages/new-patient/new-patient.component';
 import { PatientPageComponent } from './pages/patient-page/patient-page.component';
 import { SearchPageComponent } from './pages/search-page/search-page.component';
+import { CardComponent } from './components/card/card.component';
 
 
 
@@ -18,7 +19,8 @@ import { SearchPageComponent } from './pages/search-page/search-page.component';
     ListPageComponent,
     NewPatientComponent,
     PatientPageComponent,
-    SearchPageComponent
+    SearchPageComponent,
+    CardComponent
   ],
   imports: [
     CommonModule,

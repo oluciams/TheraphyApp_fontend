@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Patient } from '../../interfaces/patient.interface';
 import { PatientsService } from '../../services/patients.service';
 
+
 @Component({
   selector: 'app-list-page',
   templateUrl: './list-page.component.html',
@@ -19,3 +20,4 @@ export class ListPageComponent implements OnInit {
 
   }
 }
+

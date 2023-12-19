@@ -13,8 +13,7 @@ export class PatientsService {
 
   getPatients(): Observable<Patient[]> {
    return this.http.get<Patient[]>(`${this.baseUrl}/pacients`)
-   // return this.http.get<Patient[]>();
-
+  
   }
 
 }

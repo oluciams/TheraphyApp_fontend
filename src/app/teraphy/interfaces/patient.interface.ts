@@ -18,4 +18,3 @@ export interface Patient {
   gender:                           string;
   "other contact"?:                 string;
 }
-
