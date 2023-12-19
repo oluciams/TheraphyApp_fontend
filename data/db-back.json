@@ -1,0 +1,38 @@
+{
+  "pacients": [
+    {
+      "id": 1,
+      "name": "Alejandro",
+      "lastname": "Cuellar Huertas",
+      "name_complete": "Alejandro Cuellar Huertas",
+      "birthday": "1982-05-06",
+      "identifier": "123456789",
+      "document_type": "Cedula",
+      "mobile": "3044759796",
+      "email": "acuellarh@gmail.com",
+      "address": "carrera 5",
+      "other_contact": null,
+      "other_contact_mobile": null,
+      "other contact patient relation": "Amigo",
+      "status": null,
+      "gender": " Male"
+    },
+    {
+      "id": 2,
+      "name": "Andres",
+      "lastname": "Perez Torrado",
+      "name_complete": "Andres Perez Torrado",
+      "birthday": "1982-05-06",
+      "identifier": "321456",
+      "document_type": "Cedula",
+      "mobile": "3214569874",
+      "email": "a@gmail.com",
+      "address": "carrera 34",
+      "other contact": "Andres Calamaro",
+      "other_contact_mobile": "3214565421",
+      "other contact patient relation": "Amigo",
+      "status": true,
+      "gender": " Male"
+    }
+  ]
+}
