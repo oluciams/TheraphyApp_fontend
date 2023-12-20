@@ -1,1 +1,65 @@
-<p>patient-page works!</p>
+<ng-template #divLoading>
+  <mat-grid-list cols="2">
+    <mat-grid-tile >
+      <mat-spinner></mat-spinner>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+</ng-template>
+
+<div *ngIf="patient; else divLoading" class="grid mt-4 justify-content-center">
+
+  <mat-card class="col-4 sm:col-6 m-1 p-2 shadow-6">
+
+    <mat-card-header class="text-lg">
+      <mat-card-title>{{patient.name_complete}}</mat-card-title>
+      <mat-card-subtitle >{{patient.document_type}} : {{patient.identifier}}</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content class="mt-4 text-lg">
+      <mat-divider></mat-divider>
+      <br>
+      <p>Telefono: {{patient.mobile}}</p>
+      <p>Dirección: {{patient.address}}</p>
+      <p>Correo: {{patient.email}}</p>
+      <p>Fecha nacimiento: {{patient.birthday}}</p>
+      <p>Telefono alterno:{{patient.other_contact_mobile}}</p>
+
+      <br>
+    </mat-card-content>
+
+  </mat-card>
+
+  <mat-card class="col-4 sm:col-6 m-1 p-2 shadow-6">
+
+    <mat-card-header class="text-lg">
+      <mat-card-title>Información:</mat-card-title>
+      <mat-card-subtitle >{{patient.name_complete}}</mat-card-subtitle>
+    </mat-card-header>
+
+     <mat-card-content class="mt-4 text-lg">
+      <mat-divider></mat-divider>
+      <mat-list>
+        <mat-list-item>Diagnóstico: xxxxxxxxxxx</mat-list-item>
+      </mat-list>
+
+      <p>Diagnóstico: xxxxxxxxxxx</p>
+      <p>Cantidad de sesiones: xx</p>
+      <p>Sesiones Faltante: xx</p>
+      <p>Terapia Fisica: x</p>
+      <p>Productos: xxxxxxx</p>
+      <p>Pago: si o no</p>
+      <br>
+
+      <button
+        mat-button
+        color="warn"
+        (click)="goBack()"
+      >
+        Regresar
+      </button>
+    </mat-card-content>
+
+  </mat-card>
+
+</div>
