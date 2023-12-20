@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { MaterialModule } from '../material/material.module';
-import { TeraphyRoutingModule } from './teraphy-routing.module';
+import { PatientsRoutingModule } from './patients-routing.module';
 import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
 import { ListPageComponent } from './pages/list-page/list-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -26,7 +26,7 @@ import { CardComponent } from './components/card/card.component';
     CommonModule,
     ReactiveFormsModule,
     MaterialModule,
-    TeraphyRoutingModule
+    PatientsRoutingModule
   ]
 })
-export class TeraphyModule { }
+export class PatientsModule { }

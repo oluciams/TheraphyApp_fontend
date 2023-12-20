@@ -8,9 +8,9 @@ const routes: Routes = [
     loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
   },
   {
-    path: 'teraphy',
+    path: 'patients',
     loadChildren: () =>
-      import('./teraphy/teraphy.module').then((m) => m.TeraphyModule),
+      import('./patients/patients.module').then((m) => m.PatientsModule),
   },
   {
     path: '404',
@@ -18,7 +18,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'teraphy',
+    redirectTo: 'patients',
     pathMatch: 'full'
   },
   {
