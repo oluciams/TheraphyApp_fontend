@@ -22,4 +22,9 @@ export class PatientsService {
       );
   }
 
+  getSuggestions(query: string): Observable<Patient[]> {
+    return this.http.get<Patient[]>(`${this.baseUrl}/pacients/?q=${ query }&_limit=3`)
+
+  }
+
 }
