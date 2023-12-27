@@ -85,5 +85,20 @@
       "status": true,
       "gender": " Male"
     }
+  ],
+
+  "genders": [
+    {
+      "id": 1,
+      "name": "null-gender"
+    },
+    {
+      "id": 2,
+      "name": "Masculino"
+    },
+    {
+      "id": 3,
+      "name": "Femenino"
+    }
   ]
 }

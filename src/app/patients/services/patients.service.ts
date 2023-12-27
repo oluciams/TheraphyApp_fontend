@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, catchError, of } from 'rxjs';
 import { Patient } from '../interfaces/patient.interface';
 import { environments } from 'src/environments/environments';
+import { Gender } from '../interfaces/gender.interface';
 
 @Injectable({providedIn: 'root'})
 export class PatientsService {
@@ -25,6 +26,11 @@ export class PatientsService {
   getSuggestions(query: string): Observable<Patient[]> {
     return this.http.get<Patient[]>(`${this.baseUrl}/pacients/?q=${ query }&_limit=3`)
 
+  }
+
+  getPatientsGenders(): Observable<Gender[]> {
+
+    return this.http.get<Gender[]>(`${this.baseUrl}/genders`)
   }
 
 }
