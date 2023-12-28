@@ -82,5 +82,41 @@
       "id": 3,
       "name": "Femenino"
     }
-  ]
+  ],
+  "document_types":[
+    {
+        "id": 1,
+        "name": "C.C"
+    },
+    {
+        "id": 2,
+        "name": "NIT"
+    },
+    {
+        "id": 3,
+        "name": "NUI"
+    },
+    {
+        "id": 4,
+        "name": "C.E"
+    },
+    {
+        "id": 5,
+        "name": "T.I"
+    }
+  ],
+  "relationships":[
+    {
+        "id": 1,
+        "name": "Pareja"
+    },
+    {
+        "id": 2,
+        "name": "Hermano(a)"
+    },
+    {
+        "id": 3,
+        "name": "Amigo(a)"
+    }
+]
 }

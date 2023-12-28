@@ -12,13 +12,17 @@
     <mat-card>
       <mat-card-content class="m-4">
 
-        <div class="grid">
+        <form class="grid" [formGroup]="patientForm" (ngSubmit)="onSubmit()">
 
           <mat-form-field class="col-4 sm:col-4">
             <mat-label>Tipo de documento</mat-label>
-            <mat-select>
-              <mat-option>
-
+            <mat-select
+              formControlName="identifier"
+              required
+            >
+              <mat-option *ngFor="let documentType of documentTypes"
+                [value]="documentType.id" >
+                {{documentType.name}}
               </mat-option>
             </mat-select>
           </mat-form-field>
@@ -27,15 +31,18 @@
             <mat-label>Numero de documento</mat-label>
             <input
               matInput
-              type="number"
-              name="identifier"
-              id=""
-              />
+              type="text"
+              required
+              formControlName="identifier"
+            />
           </mat-form-field>
 
           <mat-form-field class="col-4 sm:col-6">
             <mat-label>Genero</mat-label>
-            <mat-select>
+            <mat-select
+              formControlName="gender"
+              required
+            >
               <mat-option *ngFor="let gender of genders"
                 [value]="gender.id">
                 {{gender.name}}
@@ -48,8 +55,8 @@
             <input
               matInput
               type="text"
-              name="name"
-              id=""
+              required
+              formControlName="name"
               />
           </mat-form-field>
 
@@ -58,8 +65,8 @@
             <input
               matInput
               type="text"
-              name="lastname"
-              id=""
+              required
+              formControlName="lastname"
               />
           </mat-form-field>
 
@@ -68,8 +75,8 @@
             <input
               matInput
               type="date"
-              name="birthday"
-              id=""
+              required
+              formControlName="birthday"
               />
           </mat-form-field>
 
@@ -78,8 +85,8 @@
             <input
               matInput
               type="number"
-              name="mobile"
-              id=""
+              required
+              formControlName="mobile"
               />
           </mat-form-field>
 
@@ -88,8 +95,8 @@
             <input
               matInput
               type="email"
-              name="email"
-              id=""
+              required
+              formControlName="email"
               />
           </mat-form-field>
 
@@ -98,8 +105,8 @@
             <input
               matInput
               type="text"
-              name="address"
-              id=""
+              required
+              formControlName="address"
               />
           </mat-form-field>
 
@@ -108,9 +115,9 @@
             <input
               matInput
               type="text"
-              name="other_contact"
-              id=""
-              />
+              required
+              formControlName="other_contact"
+            />
           </mat-form-field>
 
           <mat-form-field class="col-6 sm:col-6">
@@ -118,20 +125,25 @@
             <input
               matInput
               type="number"
-              name="other_contact_mobile"
-              id=""
-              />
+              required
+              formControlName="other_contact_mobile"
+            />
           </mat-form-field>
 
             <mat-form-field class="col-6 sm:col-4">
             <mat-label>Tipo de contacto</mat-label>
-            <mat-select>
-              <mat-option>
-
+            <mat-select
+              formControlName="other_contact_pacient_relation"
+              required
+            >
+              <mat-option *ngFor="let relationship of relationships"
+                [value]="relationship.id"
+              >
+                {{relationship.name}}
               </mat-option>
             </mat-select>
           </mat-form-field>
-        </div>
+        </form>
 
         <div class="flex justify-content-between">
           <button
@@ -145,6 +157,7 @@
           <button
             mat-raised-button
             color="primary"
+            (click)="onSubmit()"
           >
             <mat-icon>save</mat-icon>
             Guardar
