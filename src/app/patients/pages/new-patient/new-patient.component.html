@@ -1,7 +1,7 @@
 <h1>
   Editar / Agregar
   Paciente
-  <small>Alejandro</small>
+  <small>Nombre del Paciente</small>
 </h1>
 
 <mat-divider class="mb-2"></mat-divider>
@@ -17,7 +17,7 @@
           <mat-form-field class="col-4 sm:col-4">
             <mat-label>Tipo de documento</mat-label>
             <mat-select
-              formControlName="identifier"
+              formControlName="document_type_id"
               required
             >
               <mat-option *ngFor="let documentType of documentTypes"
@@ -40,7 +40,7 @@
           <mat-form-field class="col-4 sm:col-6">
             <mat-label>Genero</mat-label>
             <mat-select
-              formControlName="gender"
+              formControlName="gender_id"
               required
             >
               <mat-option *ngFor="let gender of genders"
@@ -84,7 +84,7 @@
             <mat-label>Telefono</mat-label>
             <input
               matInput
-              type="number"
+              type="text"
               required
               formControlName="mobile"
               />
@@ -124,7 +124,7 @@
             <mat-label>Telefono otro contacto</mat-label>
             <input
               matInput
-              type="number"
+              type="text"
               required
               formControlName="other_contact_mobile"
             />
@@ -133,7 +133,7 @@
             <mat-form-field class="col-6 sm:col-4">
             <mat-label>Tipo de contacto</mat-label>
             <mat-select
-              formControlName="other_contact_pacient_relation"
+              formControlName="relationship_id"
               required
             >
               <mat-option *ngFor="let relationship of relationships"

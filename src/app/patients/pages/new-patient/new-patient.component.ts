@@ -12,19 +12,21 @@ import { Relationships } from '../../interfaces/relationships.interface';
 })
 export class NewPatientComponent implements OnInit {
   public patientForm = new FormGroup({
-    gender: new FormControl<Genders>(Genders.NullGender),
+
+    document_type_id: new FormControl<string>(''),
+    identifier: new FormControl<string>(''),
+    gender_id: new FormControl<Genders>(Genders.NullGender),
     name: new FormControl<string>('', { nonNullable: true }),
     lastname: new FormControl<string>(''),
     birthday: new FormControl<string>(''),
-    identifier: new FormControl<string>(''),
-    document_type: new FormControl<string>(''),
     mobile: new FormControl<string>(''),
     email: new FormControl<string>(''),
     address: new FormControl<string>(''),
     other_contact: new FormControl<string>(''),
     other_contact_mobile: new FormControl<string>(''),
-    other_contact_pacient_relation: new FormControl<string>(''),
     status: new FormControl<boolean>(true),
+    relationship_id: new FormControl<string>(''),
+
   });
 
   public genders: Gender[] = [];
@@ -44,11 +46,11 @@ export class NewPatientComponent implements OnInit {
 
     this.patientsDocumentTypes
       .getPatientsDocumentTypes()
-      .subscribe((documentTypes) => this.documentTypes = documentTypes)
+      .subscribe((documentTypes) => (this.documentTypes = documentTypes));
 
     this.patientsRelatioships
       .getPatientsRelationships()
-      .subscribe((relationships) => this.relationships = relationships)
+      .subscribe((relationships) => (this.relationships = relationships));
   }
 
   onSubmit(): void {
