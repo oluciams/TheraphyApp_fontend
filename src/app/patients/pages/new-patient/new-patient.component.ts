@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 import { PatientsService } from '../../services/patients.service';
 import { Genders, Patient } from '../../interfaces/patient.interface';
@@ -42,7 +43,8 @@ export class NewPatientComponent implements OnInit {
     private patientsRelatioships: PatientsService,
     private patientsService: PatientsService,
     private activatedRoute: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private snackbar: MatSnackBar,
   ) {}
 
   ngOnInit(): void {
@@ -86,15 +88,22 @@ export class NewPatientComponent implements OnInit {
     if (this.currentPatient.id) {
       this.patientsService.updatePatient(this.currentPatient)
         .subscribe(patient => {
-          //TODO: mostrar mensaje
+          this.showSnackbar(`${patient.name} ${patient.lastname} updated!`);
         });
 
       return;
     }
-    
+
     this.patientsService.addPatient(this.currentPatient)
       .subscribe(patient => {
-        //TODO: mostrar mensaje y navegar al paciente id
+        this.router.navigate(['patients/list', patient.id]);
+        this.showSnackbar(`${patient.name} ${patient.lastname} created!`);
       })
+  }
+
+  showSnackbar( message: string ): void {
+    this.snackbar.open(message, 'done', {
+      duration: 2500
+    } )
   }
 }

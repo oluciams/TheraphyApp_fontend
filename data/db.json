@@ -2,7 +2,7 @@
   "pacients": [
     {
       "id": 2,
-      "name": "Andres",
+      "name": "Andres loco",
       "lastname": "Perez Torrado",
       "name_complete": "Andres Perez Torrado",
       "birthday": "1982-05-06",
@@ -15,7 +15,11 @@
       "other_contact_mobile": "3214565421",
       "other contact patient relation": "Amigo",
       "status": true,
-      "gender": " Male"
+      "gender": " Male",
+      "document_type_id": 1,
+      "other_contact": "hhhh",
+      "relationship_id": 1,
+      "gender_id": 1
     },
     {
       "id": 3,
@@ -74,7 +78,7 @@
     },
     {
       "id": 6,
-      "name": "Julio Agustin prueba",
+      "name": "Julio probando",
       "lastname": "Marin Villa",
       "birthday": "2000-10-03",
       "identifier": "56396656",
@@ -87,6 +91,54 @@
       "relationship_id": 1,
       "status": true,
       "gender_id": 2
+    },
+    {
+      "id": 7,
+      "name": "India Maria",
+      "lastname": "Castaño",
+      "birthday": "2003-04-05",
+      "identifier": "2252522525",
+      "document_type_id": 1,
+      "mobile": "236 564 12 12",
+      "email": "india@email.com",
+      "address": "calle 45 no. 80-20",
+      "other_contact": "Luisa Lopez",
+      "other_contact_mobile": "369 456 14 12 ",
+      "relationship_id": 3,
+      "status": true,
+      "gender_id": 3
+    },
+    {
+      "id": 8,
+      "name": "KaKI",
+      "lastname": "jaramillo",
+      "birthday": "1999-09-08",
+      "identifier": "254545",
+      "document_type_id": 5,
+      "mobile": "3656565989",
+      "email": "kaki@email.com",
+      "address": "vereda lopez",
+      "other_contact": "nona aguilar",
+      "other_contact_mobile": "255685988",
+      "relationship_id": 2,
+      "status": true,
+      "gender_id": 1
+    },
+    {
+      "id": 9,
+      "name": "Fernando",
+      "lastname": "fernandez",
+      "birthday": "1980-09-30",
+      "identifier": "558585888",
+      "document_type_id": 2,
+      "mobile": "255588",
+      "email": "fernandoqemail.com",
+      "address": "calle larga",
+      "other_contact": "juan loco",
+      "other_contact_mobile": "255588",
+      "relationship_id": 3,
+      "status": true,
+      "gender_id": 1
     }
   ],
   "genders": [

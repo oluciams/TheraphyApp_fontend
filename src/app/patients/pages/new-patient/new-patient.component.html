@@ -1,7 +1,7 @@
 <h1>
-  Editar / Agregar
+  {{ currentPatient.id ? 'Editar' : 'Agregar' }}
   Paciente
-  <small>Nombre del Paciente</small>
+  <small *ngIf="currentPatient.id">{{currentPatient.name}} {{currentPatient.lastname}}</small>
 </h1>
 
 <mat-divider class="mb-2"></mat-divider>
@@ -147,12 +147,15 @@
 
         <div class="flex justify-content-between">
           <button
+            *ngIf="currentPatient.id"
             mat-raised-button
             color="warn"
           >
             <mat-icon>delete</mat-icon>
             Borrar
           </button>
+
+          <span></span>
 
           <button
             mat-raised-button
