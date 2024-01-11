@@ -20,6 +20,24 @@ export interface Patient {
   gender:                         string;
 }
 
+// export interface Patient {
+//   id: number;
+//   name: string;
+//   lastname: string;
+//   name_complete: string;
+//   birthday: string;
+//   identifier: string;
+//   document_type_id: string;
+//   mobile: string;
+//   email: string;
+//   address: string;
+//   other_contact: string;
+//   other_contact_mobile: string;
+//   relationship_id: string;
+//   status: boolean;
+//   gender_id: string;
+// }
+
 export enum Genders {
   NullGender = "Null Gender",
   Masculino = "Masculino",

@@ -53,7 +53,7 @@
     },
     {
       "id": 5,
-      "name": "Lucas",
+      "name": "Lucas prueba",
       "lastname": "Perez Torrado",
       "name_complete": "Lucas Perez Torrado",
       "birthday": "1982-05-06",
@@ -66,24 +66,27 @@
       "other_contact_mobile": "3214565421",
       "other contact patient relation": "Amigo",
       "status": true,
-      "gender": " Male"
+      "gender": " Male",
+      "document_type_id": 2,
+      "other_contact": "Luis",
+      "relationship_id": 3,
+      "gender_id": 2
     },
     {
-      "document_type_id": 1,
-      "identifier": "3698765",
-      "gender_id": 3,
-      "name": "Maria",
-      "lastname": "Villa gomez",
-      "birthday": "2000-03-07",
-      "mobile": "345 659 23 25",
-      "email": "maria@email.com",
-      "address": "calle 9 no. 12-36",
-      "other_contact": "Luis Salgado",
-      "other_contact_mobile": "256 698 12 12 ",
+      "id": 6,
+      "name": "Julio Agustin prueba",
+      "lastname": "Marin Villa",
+      "birthday": "2000-10-03",
+      "identifier": "56396656",
+      "document_type_id": 2,
+      "mobile": "345 699 33 33",
+      "email": "julio@email.com",
+      "address": "calle 89 no. 40-50",
+      "other_contact": "Francy Lopez",
+      "other_contact_mobile": "320 698 55 55 ",
+      "relationship_id": 1,
       "status": true,
-      "relationship_id": 3,
-      "name_complete": "Maria Villa gomez",
-      "id": 6
+      "gender_id": 2
     }
   ],
   "genders": [

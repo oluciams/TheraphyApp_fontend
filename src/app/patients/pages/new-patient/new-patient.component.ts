@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { PatientsService } from '../../services/patients.service';
 import { FormControl, FormGroup } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+
+import { PatientsService } from '../../services/patients.service';
 import { Genders, Patient } from '../../interfaces/patient.interface';
 import { Gender } from '../../interfaces/gender.interface';
 import { DocumentTypes } from '../../interfaces/documentTypes.interface';
 import { Relationships } from '../../interfaces/relationships.interface';
+import { switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-new-patient',
@@ -12,7 +15,7 @@ import { Relationships } from '../../interfaces/relationships.interface';
 })
 export class NewPatientComponent implements OnInit {
   public patientForm = new FormGroup({
-
+    id: new FormControl<number>(0),
     name: new FormControl<string>('', { nonNullable: true }),
     lastname: new FormControl<string>(''),
     birthday: new FormControl<string>(''),
@@ -37,10 +40,13 @@ export class NewPatientComponent implements OnInit {
     private patientsGendersService: PatientsService,
     private patientsDocumentTypes: PatientsService,
     private patientsRelatioships: PatientsService,
-    private patientsService: PatientsService
+    private patientsService: PatientsService,
+    private activatedRoute: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
+
     this.patientsGendersService
       .getPatientsGenders()
       .subscribe((genders) => (this.genders = genders));
@@ -52,6 +58,19 @@ export class NewPatientComponent implements OnInit {
     this.patientsRelatioships
       .getPatientsRelationships()
       .subscribe((relationships) => (this.relationships = relationships));
+
+    if (!this.router.url.includes('edit')) return;
+
+    this.activatedRoute.params
+      .pipe(
+        switchMap( ({id}) => this.patientsService.getPatientById(id)),
+    ).subscribe(patient => {
+
+        if (!patient) return this.router.navigateByUrl('/');
+
+        this.patientForm.reset(patient);
+        return;
+    })
   }
 
   get currentPatient(): Patient {
@@ -72,7 +91,7 @@ export class NewPatientComponent implements OnInit {
 
       return;
     }
-
+    
     this.patientsService.addPatient(this.currentPatient)
       .subscribe(patient => {
         //TODO: mostrar mensaje y navegar al paciente id
