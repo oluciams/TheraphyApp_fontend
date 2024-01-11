@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PatientsService } from '../../services/patients.service';
 import { FormControl, FormGroup } from '@angular/forms';
-import { Genders } from '../../interfaces/patient.interface';
+import { Genders, Patient } from '../../interfaces/patient.interface';
 import { Gender } from '../../interfaces/gender.interface';
 import { DocumentTypes } from '../../interfaces/documentTypes.interface';
 import { Relationships } from '../../interfaces/relationships.interface';
@@ -13,19 +13,19 @@ import { Relationships } from '../../interfaces/relationships.interface';
 export class NewPatientComponent implements OnInit {
   public patientForm = new FormGroup({
 
-    document_type_id: new FormControl<string>(''),
-    identifier: new FormControl<string>(''),
-    gender_id: new FormControl<Genders>(Genders.NullGender),
     name: new FormControl<string>('', { nonNullable: true }),
     lastname: new FormControl<string>(''),
     birthday: new FormControl<string>(''),
+    identifier: new FormControl<string>(''),
+    document_type_id: new FormControl<string>(''),
     mobile: new FormControl<string>(''),
     email: new FormControl<string>(''),
     address: new FormControl<string>(''),
     other_contact: new FormControl<string>(''),
     other_contact_mobile: new FormControl<string>(''),
-    status: new FormControl<boolean>(true),
     relationship_id: new FormControl<string>(''),
+    status: new FormControl<boolean>(true),
+    gender_id: new FormControl<Genders>(Genders.NullGender),
 
   });
 
@@ -36,7 +36,8 @@ export class NewPatientComponent implements OnInit {
   constructor(
     private patientsGendersService: PatientsService,
     private patientsDocumentTypes: PatientsService,
-    private patientsRelatioships: PatientsService
+    private patientsRelatioships: PatientsService,
+    private patientsService: PatientsService
   ) {}
 
   ngOnInit(): void {
@@ -53,10 +54,28 @@ export class NewPatientComponent implements OnInit {
       .subscribe((relationships) => (this.relationships = relationships));
   }
 
+  get currentPatient(): Patient {
+
+    const patient = this.patientForm.value as Patient;
+    return patient;
+  }
+
   onSubmit(): void {
-    console.log({
-      formIsValid: this.patientForm.valid,
-      value: this.patientForm.value,
-    });
+
+    if (this.patientForm.invalid) return;
+
+    if (this.currentPatient.id) {
+      this.patientsService.updatePatient(this.currentPatient)
+        .subscribe(patient => {
+          //TODO: mostrar mensaje
+        });
+
+      return;
+    }
+
+    this.patientsService.addPatient(this.currentPatient)
+      .subscribe(patient => {
+        //TODO: mostrar mensaje y navegar al paciente id
+      })
   }
 }

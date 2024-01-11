@@ -67,6 +67,23 @@
       "other contact patient relation": "Amigo",
       "status": true,
       "gender": " Male"
+    },
+    {
+      "document_type_id": 1,
+      "identifier": "3698765",
+      "gender_id": 3,
+      "name": "Maria",
+      "lastname": "Villa gomez",
+      "birthday": "2000-03-07",
+      "mobile": "345 659 23 25",
+      "email": "maria@email.com",
+      "address": "calle 9 no. 12-36",
+      "other_contact": "Luis Salgado",
+      "other_contact_mobile": "256 698 12 12 ",
+      "status": true,
+      "relationship_id": 3,
+      "name_complete": "Maria Villa gomez",
+      "id": 6
     }
   ],
   "genders": [
@@ -83,40 +100,40 @@
       "name": "Femenino"
     }
   ],
-  "document_types":[
+  "document_types": [
     {
-        "id": 1,
-        "name": "C.C"
+      "id": 1,
+      "name": "C.C"
     },
     {
-        "id": 2,
-        "name": "NIT"
+      "id": 2,
+      "name": "NIT"
     },
     {
-        "id": 3,
-        "name": "NUI"
+      "id": 3,
+      "name": "NUI"
     },
     {
-        "id": 4,
-        "name": "C.E"
+      "id": 4,
+      "name": "C.E"
     },
     {
-        "id": 5,
-        "name": "T.I"
+      "id": 5,
+      "name": "T.I"
     }
   ],
-  "relationships":[
+  "relationships": [
     {
-        "id": 1,
-        "name": "Pareja"
+      "id": 1,
+      "name": "Pareja"
     },
     {
-        "id": 2,
-        "name": "Hermano(a)"
+      "id": 2,
+      "name": "Hermano(a)"
     },
     {
-        "id": 3,
-        "name": "Amigo(a)"
+      "id": 3,
+      "name": "Amigo(a)"
     }
-]
+  ]
 }
