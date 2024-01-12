@@ -10,6 +10,7 @@ import { NewPatientComponent } from './pages/new-patient/new-patient.component';
 import { PatientPageComponent } from './pages/patient-page/patient-page.component';
 import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { CardComponent } from './components/card/card.component';
+import { ConfirmDialogComponent } from './components/confirmDialog/confirm-dialog.component';
 
 
 
@@ -20,7 +21,8 @@ import { CardComponent } from './components/card/card.component';
     NewPatientComponent,
     PatientPageComponent,
     SearchPageComponent,
-    CardComponent
+    CardComponent,
+    ConfirmDialogComponent
   ],
   imports: [
     CommonModule,

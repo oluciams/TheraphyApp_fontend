@@ -58,11 +58,13 @@ export class PatientsService {
   //   return this.http.put<Patient>(`${this.baseUrl}/pacients/${ patient.id }`, patient);
   // }
 
-  deletePatientById(id: string): Observable<boolean> {
-    return this.http.delete(`${this.baseUrl}/pacients/${id}`).pipe(
-      catchError((err) => of(false)),
-      map((resp) => true)
+  deletePatientById(id: number): Observable<boolean> {
+    return this.http.delete(`${this.baseUrl}/pacients/${id}`)
+      .pipe(
+        map((resp) => true),
+        catchError((err) => of(false)),
     );
   }
 }
+
 

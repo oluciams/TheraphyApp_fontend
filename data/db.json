@@ -93,38 +93,6 @@
       "gender_id": 2
     },
     {
-      "id": 7,
-      "name": "India Maria",
-      "lastname": "Castaño",
-      "birthday": "2003-04-05",
-      "identifier": "2252522525",
-      "document_type_id": 1,
-      "mobile": "236 564 12 12",
-      "email": "india@email.com",
-      "address": "calle 45 no. 80-20",
-      "other_contact": "Luisa Lopez",
-      "other_contact_mobile": "369 456 14 12 ",
-      "relationship_id": 3,
-      "status": true,
-      "gender_id": 3
-    },
-    {
-      "id": 8,
-      "name": "KaKI",
-      "lastname": "jaramillo",
-      "birthday": "1999-09-08",
-      "identifier": "254545",
-      "document_type_id": 5,
-      "mobile": "3656565989",
-      "email": "kaki@email.com",
-      "address": "vereda lopez",
-      "other_contact": "nona aguilar",
-      "other_contact_mobile": "255685988",
-      "relationship_id": 2,
-      "status": true,
-      "gender_id": 1
-    },
-    {
       "id": 9,
       "name": "Fernando",
       "lastname": "fernandez",
