@@ -56,43 +56,6 @@
       "gender": " Male"
     },
     {
-      "id": 5,
-      "name": "Lucas prueba",
-      "lastname": "Perez Torrado",
-      "name_complete": "Lucas Perez Torrado",
-      "birthday": "1982-05-06",
-      "identifier": "321456",
-      "document_type": "Cedula",
-      "mobile": "3214569874",
-      "email": "a@gmail.com",
-      "address": "carrera 34",
-      "other contact": "Andres Calamaro",
-      "other_contact_mobile": "3214565421",
-      "other contact patient relation": "Amigo",
-      "status": true,
-      "gender": " Male",
-      "document_type_id": 2,
-      "other_contact": "Luis",
-      "relationship_id": 3,
-      "gender_id": 2
-    },
-    {
-      "id": 6,
-      "name": "Julio probando",
-      "lastname": "Marin Villa",
-      "birthday": "2000-10-03",
-      "identifier": "56396656",
-      "document_type_id": 2,
-      "mobile": "345 699 33 33",
-      "email": "julio@email.com",
-      "address": "calle 89 no. 40-50",
-      "other_contact": "Francy Lopez",
-      "other_contact_mobile": "320 698 55 55 ",
-      "relationship_id": 1,
-      "status": true,
-      "gender_id": 2
-    },
-    {
       "id": 9,
       "name": "Fernando",
       "lastname": "fernandez",
@@ -107,6 +70,22 @@
       "relationship_id": 3,
       "status": true,
       "gender_id": 1
+    },
+    {
+      "id": 10,
+      "name": "Maria",
+      "lastname": "Lopez Velez",
+      "birthday": "2000-01-01",
+      "identifier": "25963369",
+      "document_type_id": 1,
+      "mobile": "302 568 45 45 ",
+      "email": "maria@email.com",
+      "address": "calle 85 no. 36-63",
+      "other_contact": "Maribel Lopez",
+      "other_contact_mobile": "302 415 45 45 ",
+      "relationship_id": 2,
+      "status": true,
+      "gender_id": 3
     }
   ],
   "genders": [
