@@ -33,6 +33,95 @@
       "other contact patient relation": "Amigo",
       "status": true,
       "gender": " Male"
+    },
+    {
+      "id": 9,
+      "name": "Fernando",
+      "lastname": "fernandez",
+      "birthday": "1980-09-30",
+      "identifier": "558585888",
+      "document_type_id": 2,
+      "mobile": "255588",
+      "email": "fernandoqemail.com",
+      "address": "calle larga",
+      "other_contact": "juan loco",
+      "other_contact_mobile": "255588",
+      "relationship_id": 3,
+      "status": true,
+      "gender_id": 1
+    },
+    {
+      "id": 10,
+      "name": "Maria",
+      "lastname": "Lopez Velez",
+      "birthday": "2000-01-01",
+      "identifier": "25963369",
+      "document_type_id": 1,
+      "mobile": "302 568 45 45 ",
+      "email": "maria@email.com",
+      "address": "calle 85 no. 36-63",
+      "other_contact": "Maribel Lopez",
+      "other_contact_mobile": "302 415 45 45 ",
+      "relationship_id": 2,
+      "status": true,
+      "gender_id": 3
+    }
+  ],
+  "genders": [
+    {
+      "id": 1,
+      "name": "null-gender"
+    },
+    {
+      "id": 2,
+      "name": "Masculino"
+    },
+    {
+      "id": 3,
+      "name": "Femenino"
+    }
+  ],
+  "document_types": [
+    {
+      "id": 1,
+      "name": "C.C"
+    },
+    {
+      "id": 2,
+      "name": "NIT"
+    },
+    {
+      "id": 3,
+      "name": "NUI"
+    },
+    {
+      "id": 4,
+      "name": "C.E"
+    },
+    {
+      "id": 5,
+      "name": "T.I"
+    }
+  ],
+  "relationships": [
+    {
+      "id": 1,
+      "name": "Pareja"
+    },
+    {
+      "id": 2,
+      "name": "Hermano(a)"
+    },
+    {
+      "id": 3,
+      "name": "Amigo(a)"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "user": "Yady Cuellar",
+      "email": "yady.cuellar@email.com"
     }
   ]
 }

@@ -32,8 +32,11 @@
     <span class="ml-2">Theraphy App</span>
     <span class="spacer"></span>
 
+    <span class="mr-3">{{user?.email}}</span>
+
     <button
       mat-raised-button
+      (click)="onLogout()"
       color="primary"
     >
      Logout

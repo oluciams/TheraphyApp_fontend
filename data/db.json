@@ -137,5 +137,12 @@
       "id": 3,
       "name": "Amigo(a)"
     }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "user": "Yady Cuellar",
+      "email": "yady.cuellar@email.com"
+    }
   ]
 }
