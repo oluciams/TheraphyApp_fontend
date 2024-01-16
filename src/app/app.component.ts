@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { AuthService } from 'src/app/auth/services/auth.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public title: string = 'TheraphyApp';
+  
 }

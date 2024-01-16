@@ -1,27 +1,6 @@
 {
   "pacients": [
     {
-      "id": 2,
-      "name": "Andres loco",
-      "lastname": "Perez Torrado",
-      "name_complete": "Andres Perez Torrado",
-      "birthday": "1982-05-06",
-      "identifier": "321456",
-      "document_type": "Cedula",
-      "mobile": "3214569874",
-      "email": "a@gmail.com",
-      "address": "carrera 34",
-      "other contact": "Andres Calamaro",
-      "other_contact_mobile": "3214565421",
-      "other contact patient relation": "Amigo",
-      "status": true,
-      "gender": " Male",
-      "document_type_id": 1,
-      "other_contact": "hhhh",
-      "relationship_id": 1,
-      "gender_id": 1
-    },
-    {
       "id": 3,
       "name": "Pedro",
       "lastname": "Perez Torrado",
@@ -84,6 +63,22 @@
       "other_contact": "Maribel Lopez",
       "other_contact_mobile": "302 415 45 45 ",
       "relationship_id": 2,
+      "status": true,
+      "gender_id": 3
+    },
+    {
+      "id": 11,
+      "name": "Barbara",
+      "lastname": "Smith",
+      "birthday": "1999-03-02",
+      "identifier": "35968",
+      "document_type_id": 4,
+      "mobile": "3126589898",
+      "email": "barbara@email.com",
+      "address": "calle 20 no. 40-56",
+      "other_contact": "Luis salgado",
+      "other_contact_mobile": "3126 56989 5454",
+      "relationship_id": 3,
       "status": true,
       "gender_id": 3
     }
