@@ -1,23 +1,6 @@
 {
   "pacients": [
     {
-      "id": 3,
-      "name": "Pedro",
-      "lastname": "Perez Torrado",
-      "name_complete": "Pedro Perez Torrado",
-      "birthday": "1982-05-06",
-      "identifier": "321456",
-      "document_type": "Cedula",
-      "mobile": "3214569874",
-      "email": "a@gmail.com",
-      "address": "carrera 34",
-      "other contact": "Andres Calamaro",
-      "other_contact_mobile": "3214565421",
-      "other contact patient relation": "Amigo",
-      "status": true,
-      "gender": " Male"
-    },
-    {
       "id": 4,
       "name": "Carlos",
       "lastname": "Perez Torrado",
@@ -81,6 +64,22 @@
       "relationship_id": 3,
       "status": true,
       "gender_id": 3
+    },
+    {
+      "id": 12,
+      "name": "Alirio",
+      "lastname": "Calle Gomez",
+      "birthday": "2000-12-10",
+      "identifier": "74569325",
+      "document_type_id": 1,
+      "mobile": "315 485 65 48",
+      "email": "alirio@email.com",
+      "address": "carrera 45 no. 85-65",
+      "other_contact": "Julia Correa",
+      "other_contact_mobile": "365 895 45 45",
+      "relationship_id": 3,
+      "status": true,
+      "gender_id": 2
     }
   ],
   "genders": [
