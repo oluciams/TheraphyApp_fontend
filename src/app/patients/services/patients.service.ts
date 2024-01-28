@@ -10,11 +10,18 @@ import { Relationships } from '../interfaces/relationships.interface';
 @Injectable({ providedIn: 'root' })
 export class PatientsService {
   private baseUrl: string = environments.baseUrl;
+  //private baseUrl: string =
+  //'https://infinite-refuge-91025-0c863516cc4f.herokuapp.com/api/v1';
 
   constructor(private http: HttpClient) {}
 
   getPatients(): Observable<Patient[]> {
-    return this.http.get<Patient[]>(`${this.baseUrl}/pacients`);
+    return this.http.get<Patient[]>(`${this.baseUrl}/pacients`)
+      .pipe(
+        catchError(error => {
+          return of([])
+        })
+      )
   }
 
   getPatientById(id: string): Observable<Patient | undefined> {
@@ -59,10 +66,9 @@ export class PatientsService {
   // }
 
   deletePatientById(id: number): Observable<boolean> {
-    return this.http.delete(`${this.baseUrl}/pacients/${id}`)
-      .pipe(
-        map((resp) => true),
-        catchError((err) => of(false)),
+    return this.http.delete(`${this.baseUrl}/pacients/${id}`).pipe(
+      map((resp) => true),
+      catchError((err) => of(false))
     );
   }
 }

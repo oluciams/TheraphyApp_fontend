@@ -16,8 +16,16 @@ export class ListPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.patientsService.getPatients()
-      .subscribe(patients => this.patients = patients);
-
+      .subscribe((patients) => (this.patients = patients))
+      // .subscribe(
+      //   (patients) =>
+      //   {
+      //     console.log(patients)
+      //     this.patients = patients
+      //   },
+      //   (error) => {
+      //     console.log(error)
+      //   }
+      // )
   }
 }
-
