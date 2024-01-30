@@ -87,6 +87,7 @@ export class NewPatientComponent implements OnInit {
       this.patientsService
         .updatePatient(this.currentPatient)
         .subscribe((patient) => {
+          this.router.navigate(['patients/list', patient.id]);
           this.showSnackbar(`${patient.name} ${patient.lastname} updated!`);
         });
 

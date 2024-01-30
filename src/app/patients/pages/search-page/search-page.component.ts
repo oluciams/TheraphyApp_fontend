@@ -26,7 +26,6 @@ export class SearchPageComponent {
     this.patientsService
       .getSuggestions(value)
       .subscribe((patients) => (this.patients = patients));
-    console.log({ value });
   }
 
   onSelectedOption(event: MatAutocompleteSelectedEvent): void {
@@ -38,7 +37,6 @@ export class SearchPageComponent {
     const patient: Patient = event.option.value;
 
     this.searchInput.setValue(patient.name);
-
     //this.patientsService.getPatientById(patient.id)
 
     this.selectedPatient = patient;

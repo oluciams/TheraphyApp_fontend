@@ -39,7 +39,7 @@
       *ngIf="patients.length > 0 && searchInput.value && searchInput.value.length > 0"
         mat-raised-button
         color="primary"
-        (click)="goPatient()"
+        [routerLink]="['/patients', selectedPatient?.id]"
       >
         Ver más
       </button>
@@ -48,3 +48,5 @@
 </mat-grid-list>
 
 </div>
+
+
