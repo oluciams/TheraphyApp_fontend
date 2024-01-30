@@ -1,17 +1,16 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, catchError, map, of } from 'rxjs';
-import { Patient } from '../interfaces/patient.interface';
 import { environments } from 'src/environments/environments';
+import { Patient } from '../interfaces/patient.interface';
 import { Gender } from '../interfaces/gender.interface';
 import { DocumentTypes } from '../interfaces/documentTypes.interface';
 import { Relationships } from '../interfaces/relationships.interface';
 
+
 @Injectable({ providedIn: 'root' })
 export class PatientsService {
   private baseUrl: string = environments.baseUrl;
-  //private baseUrl: string =
-  //'https://infinite-refuge-91025-0c863516cc4f.herokuapp.com/api/v1';
 
   constructor(private http: HttpClient) {}
 
